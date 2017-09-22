@@ -1,0 +1,51 @@
+﻿﻿/*背景*/
+body
+{
+	background-color:#ffffff;	/*背景色*/
+	color:#000000;				/*文字の色*/
+}
+
+/*未訪問のリンク*/
+a:link
+{
+	color:#0000ff;
+}
+
+/*訪問済みのリンク*/
+a:visited
+{
+	color:#808080;
+}
+
+/*ポイント時のリンク*/
+a:hover
+{
+	color:#ff0000;
+}
+
+/*何個目？のラジオボタン*/
+label.radio
+{
+	font-size:24px;
+}
+
+/*選択リストのボックス*/
+select.list
+{
+	font-size:20px;
+	width:180px;
+}
+
+/*選択リスト(連動時)のボックス*/
+select.list_linkage
+{
+	font-size:20px;
+	width:50px;
+}
+
+/*選択リストの送信ボタン*/
+input.list_button
+{
+	font-size:20px;
+}
+

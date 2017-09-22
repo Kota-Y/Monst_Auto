@@ -1,0 +1,146 @@
+﻿﻿<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html" charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="MonsterStrikeAuto.css">
+<script type="text/javascript" src="MonsterStrikeAuto.js"></script>
+<script type="text/javascript" src="cookiesave.js" charset="UTF-8"></script>
+<title>スクリプト部屋</title>
+</head>
+<body onLoad="SelectLinkage()">
+
+<font size = 5>何個目？</font>
+<form name="what_time">
+	<label class="radio"><input type="radio" name="time" value="1" checked>1つ</label>
+	<label class="radio"><input type="radio" name="time" value="2">2つ</label>
+	<label class="radio"><input type="radio" name="time" value="3">3つ</label>
+	<label class="radio"><input type="radio" name="time" value="4">4つ</label>
+	<label class="radio"><input type="radio" name="time" value="5">5つ</label>
+</form>
+
+<!--【イベント用】
+<font size = 5>ラーx専用</font>
+<form method="POST" action="MonsterStrikeAuto.php">
+	<select name="kind_ra" size="1" class="list">
+    	<option value="変形、第6太陽神">ラーx</option>
+  	</select>
+	<input type="hidden" name="time_hidden" id="ra" value="1">
+	<input type="submit" value="実行" name="run_ra" class="list_button" onClick="HiddenRa()">
+</form>
+-->
+
+<font size = 5>運極限定(タス曜日)</font>
+<form method="POST" action="MonsterStrikeAuto.php">
+	<select name="kind_limit_tasu" size="1" class="list">
+    		<option value="獣神竜を求めて">獣神竜</option>
+    		<option value="タスの巣窟（パワタスキング！）">パワタスキング</option>
+    		<option value="ボーナスステージ">ボーナスステージ</option>
+    		<option value="大量発生？タス亀強化祭">タス亀</option>
+    		<option value="進化へ導く洞窟">進化素材</option>
+        	<option value="進化を求めて">月～金曜日</option>
+		<option value="紅玉と蒼玉は光導く">土曜日</option>
+		<option value="碧玉は闇と踊る">日曜日</option>
+		<option value="金曜日はカネ曜日？">ゴールドゼニー</option>
+		<option value="マンの亀よりオクの甲？">マンケンチー</option>
+		<option value="年の功より亀の甲？">亀クエスト</option>
+  	</select>
+	<input type="hidden" name="time_hidden" id="limit_tasu" value="1">
+	<input type="submit" value="実行" name="run_limit_tasu" class="list_button" onClick="HiddenLimitTasu()">
+</form>
+
+<font size = 5>運極限定(超絶・爆絶)</font>
+<form method="POST" action="MonsterStrikeAuto.php">
+	<select name="kind_hard" size="1" class="list">
+    		<option value="怨炎！黄泉の主宰神">イザナミ</option>
+    		<option value="八岐ノ森の贄比女">クシナダ</option>
+    		<option value="水駆ける天叢雲の皇子">ヤマトタケル</option>
+    		<option value="天地開闢の始神">イザナギ</option>
+		<option value="月降る夜に永久を夢む女神">ツクヨミ</option>
+		<option value="紅蓮燃ゆるは妄執の悪">阿修羅</option>
+		<option value="叡智を統べし破魔の蒼天">毘沙門天</option>
+		<option value="森羅万象の特異点">摩利支天</option>
+		<option value="豊穣と破壊の双聖">大黒天</option>
+		<option value="穢土に轟く忿怒の業拳">不動明王</option>
+		<option value="渇望の果ての理想郷">アヴァロン</option>
+		<option value="悠久の祈りと魂が還る聖海">ニライカナイ</option>
+		<option value="怨炎！黄泉の主宰神・零">イザナミ零</option>
+		<option value="八岐ノ森の贄比女・零">クシナダ零</option>
+  	</select>
+	<input type="hidden" name="time_hidden" id="limit_hard" value="1">
+	<input type="submit" value="実行" name="run_limit_hard" class="list_button" onClick="HiddenLimitHard()">
+</form>
+
+<font size = 5>誰でも(超絶・爆絶)</font>
+<form method="POST" action="MonsterStrikeAuto.php">
+	<select name="kind_hard" size="1" class="list">
+    		<option value="怨炎！黄泉の主宰神">イザナミ</option>
+    		<option value="八岐ノ森の贄比女">クシナダ</option>
+    		<option value="水駆ける天叢雲の皇子">ヤマトタケル</option>
+    		<option value="天地開闢の始神">イザナギ</option>
+		<option value="月降る夜に永久を夢む女神">ツクヨミ</option>
+		<option value="紅蓮燃ゆるは妄執の悪">阿修羅</option>
+		<option value="叡智を統べし破魔の蒼天">毘沙門天</option>
+		<option value="森羅万象の特異点">摩利支天</option>
+		<option value="豊穣と破壊の双聖">大黒天</option>
+		<option value="穢土に轟く忿怒の業拳">不動明王</option>
+		<option value="渇望の果ての理想郷">アヴァロン</option>
+		<option value="悠久の祈りと魂が還る聖海">ニライカナイ</option>
+		<option value="怨炎！黄泉の主宰神・零">イザナミ零</option>
+		<option value="八岐ノ森の贄比女・零">クシナダ零</option>
+  	</select>
+	<input type="hidden" name="time_hidden" id="anybody_hard" value="1">
+	<input type="submit" value="実行" name="run_anybody_hard" class="list_button" onClick="HiddenAnybodyHard()">
+</form>
+
+<font size = 5>運極限定(降臨)</font>
+<form method="POST" action="MonsterStrikeAuto.php" name="linkage_limit">
+	<select name="attribute_limit" size="1" class="list_linkage" onChange="SelectLinkage()">
+	<option value="火">火</option>
+		<option value="水">水</option>
+		<option value="木">木</option>
+		<option value="光">光</option>
+		<option value="闇">闇</option>
+	</select>
+	<select name="kind_limit_normal" size="1" class="list">
+	</select>
+	<input type="hidden" name="time_hidden" id="limit_normal" value="1">
+	<input type="submit" value="実行" name="run_limit_normal" class="list_button" onClick="HiddenLimitNormal()">
+</form>
+
+<font size = 5>誰でも(降臨)</font>
+<form method="POST" action="MonsterStrikeAuto.php" name="linkage_anybody">
+	<select name="attribute_anybody" size="1" class="list_linkage" onChange="SelectLinkage()">
+		<option value="火">火</option>
+		<option value="水">水</option>
+		<option value="木">木</option>
+		<option value="光">光</option>
+		<option value="闇">闇</option>
+	</select>
+	<select name="kind_anybody_normal" size="1" class="list">
+	</select>
+	<input type="hidden" name="time_hidden" id="anybody_normal" value="1">
+	<input type="submit" value="実行" name="run_anybody_normal" class="list_button" onClick="HiddenAnybodyNormal()">
+</form>
+
+<font size = 5>神殿</font>
+<form method="POST" action="MonsterStrikeAuto.php">
+	<select name="kind_temple" size="1" class="list">
+   		<option value="獄炎の神殿 時の間（修羅場）">火時</option>
+    		<option value="獄炎の神殿（修羅場）">火</option>
+    		<option value="秘泉の神殿 時の間（修羅場）">水時</option>
+    		<option value="秘泉の神殿（修羅場）">水</option>
+		<option value="樹縛の神殿 時の間（修羅場）">木時</option>
+		<option value="樹縛の神殿（修羅場）">木</option>
+		<option value="光明の神殿 時の間（修羅場）">光時</option>
+		<option value="光明の神殿（修羅場）">光</option>
+		<option value="常闇の神殿 時の間（修羅場）">闇時</option>
+		<option value="常闇の神殿（修羅場）">闇</option>
+  	</select>
+	<input type="hidden" name="time_hidden" id="temple" value="1">
+	<input type="submit" value="実行" name="run_temple" class="list_button" onClick="HiddenTemple()">
+</form>
+
+</body>
+</html>
+
