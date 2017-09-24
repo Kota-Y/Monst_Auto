@@ -210,6 +210,9 @@ function SelectLinkage()
 			kind_normal[i].options[21] = new Option("魔女ヴァニラ","魔女と黒い安息日");
 			kind_normal[i].options[22] = new Option("ムラサメ","眠りから覚めし虹睨の妖刀");			
 			kind_normal[i].options[23] = new Option("ギガゾンビ","精霊王の黒き宿願");			
+			kind_normal[i].options[0]  = new Option("イエティ","夜の雪山で見た！巨大足跡");
+			kind_normal[i].options[1]  = new Option("稲荷","御伽草子の黒妖狐");
+			kind_normal[i].options[2]  = new Option("オリジナル","原点");
 		}
 	} 
 }
