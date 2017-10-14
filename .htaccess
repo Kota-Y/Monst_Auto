@@ -1,4 +1,0 @@
-AuthType     Basic
-AuthName     "Authentication Sample"
-AuthUserFile  /home/fullfill/www//Monst_Auto/.htpasswd
-require valid-user
